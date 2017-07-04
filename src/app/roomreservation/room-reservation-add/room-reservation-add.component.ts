@@ -128,6 +128,11 @@ constructor(private httpRoomResService:HttpRoomReservationService,
         {
             return res = false;
         }
+        else if((StartDate <= sdCom && StartDate <= edCom) &&  (EndDate >=sdCom && EndDate >=edCom))
+        {
+           return res = false;
+        }
+
         else 
         {
             res = true;
